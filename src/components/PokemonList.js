@@ -4,17 +4,16 @@ import { Segment } from 'semantic-ui-react'
 function PokemonList( { getPokemon } ) {
   return (
     <div className='d-flex justify-content-center mt-5'>
-      {/* <div className='pokelist'>
-        {getPokemon.map(e => {
-          return <Segment raised key={e}>{e}</Segment>
+      <div className='pokelist'>
+        {getPokemon.map(pokemon => {
+          return <Segment raised className='segment' key={pokemon.id}>
+          <div className='d-flex align-items-center'>
+          <img src={pokemon.sprites.front_default} alt="avatar"/>
+          <div>{pokemon.name.toUpperCase()}</div>
+          </div>
+          </Segment>
           })}
-      </div> */}
-
-      {/* <div className='pokelist'>
-        {getId.map(e => {
-          return <Segment raised key={e}>{e}</Segment>
-          })}
-      </div> */}
+      </div>
       
     </div>
   );

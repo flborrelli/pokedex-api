@@ -27,3 +27,7 @@ html {
 .pokelist {
   border: solid;
 }
+
+.segment {
+  width: 50vw;
+}

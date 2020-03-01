@@ -1,64 +1,72 @@
-import React, { useState, useEffect, useMemo} from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
-import PokemonList from './components/PokemonList';
-import axios from 'axios';
+import React, { useState, useEffect, useMemo } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import PokemonList from "./components/PokemonList";
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
+  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=20";
+
 
   useEffect(() => {
-    getAPIData()
+    getAPIData();
   }, []);
 
+  //Fetch initial API data
   const getAPIData = async () => {
-    try{
-      const responseFromAPI = await getAllPokemonData('https://pokeapi.co/api/v2/pokemon?limit=20');
-      console.log(responseFromAPI)
+    try {
+      const responseFromAPI = await getAllPokemonData(apiMainURL);
+      await loadPokemon(responseFromAPI.results)
+    } catch (error) {
+      console.log("An error occured while fetching data from API", error);
     }
-    catch(error){
-      console.log('An error occured while fetching data from API', error)
+  };
+
+  //Load all pokemons after all promisses are done and update state
+  const loadPokemon = async data => {
+    try {
+      const eachPokemonData = await Promise.all(data.map(async pokemon => {
+        const pokemonRecord = await getPokemon(pokemon);
+        return pokemonRecord;
+      }))
+      setPokemonData(eachPokemonData)
+    } catch(error) {
+      console.log('An error occured while loading pokemons', error)
     }
   }
 
-  //Fetching API data
-  const getAllPokemonData = async (url) => {
+  //Promise to fetch each pokemon additional data (avatar and id)
+  const getPokemon = async ({ url }) => {
     return new Promise((resolve, reject) => {
-      axios.get(url)
+      fetch(url)
+      .then(res => res.json())
       .then(data => {
         resolve(data);
+      })
+      .catch(error => {
+        console.log('An error ocurred while fetching API:', error)
       })
     })
   }
 
-
-
-  // const getAPIData = () => {
-  //   const rootAPI_URL = 'https://pokeapi.co/api/v2/pokemon?limit=20';
-  //   axios.get(rootAPI_URL)
-  //   .then(responseFromAPI => {
-  //     const pokemonArray = responseFromAPI.data.results;
-  //     pokemonArray.map(pokemon => {
-  //       return getPokemonInfos(pokemon)
-  //     })
-  //     setPokemons(pokemonArray.map(e => e.name))
-  //   })
-  //   .catch(error => console.log('An error occured while fetching API:', error))
-  // }
-
-  // const getPokemonInfos = (pokemon) => {
-  //   const url = pokemon.url;
-  //   axios.get(url)
-  //   .then(pokeInfos => {
-  //     })
-  //   .catch(error => error => console.log('An error occured while accessing Pokemon Infos:', error))
-  // }
+  //Promise to fetch initial API data
+  const getAllPokemonData = async (url) => {
+    return new Promise((resolve, reject) => {
+      fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        resolve(data);
+      })
+      .catch(error => {
+        console.log('An error ocurred while fetching API:', error)
+      })
+    });
+  };
+  
+  console.log(pokemonData)
   return (
     <div>
       <NavBar />
-      <div>
-      
-      </div>
       <PokemonList getPokemon={pokemonData}/>
     </div>
   );
