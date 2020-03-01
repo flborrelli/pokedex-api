@@ -9,7 +9,7 @@ function PokemonList( { getPokemon } ) {
           return <Segment raised className='segment' key={pokemon.id}>
           <div className='d-flex align-items-center'>
           <img src={pokemon.sprites.front_default} alt="avatar"/>
-          <div>{pokemon.name.toUpperCase()}</div>
+          <div>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</div>
           </div>
           </Segment>
           })}
