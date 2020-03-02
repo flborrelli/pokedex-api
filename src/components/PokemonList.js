@@ -4,7 +4,7 @@ import { Segment } from "semantic-ui-react";
 
 function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) {
   return (
-    <div className="d-flex justify-content-center mt-5">
+    <div className="d-flex justify-content-center mt-5 mb-4">
       <div className="pokelist">
         {loader ? (
           <Loader />
@@ -14,7 +14,7 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
               <Segment raised className="segment" key={pokemon.id}>
                 <div className="d-flex align-items-center">
                   <img src={pokemon.sprites.front_default} alt="avatar" />
-                  <div>
+                  <div className='ml-3 pokemon-name'>
                     {pokemon.name.charAt(0).toUpperCase() +
                       pokemon.name.slice(1)}
                   </div>
@@ -28,7 +28,7 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
               <Segment raised className="segment" key={pokemon.id}>
                 <div className="d-flex align-items-center">
                   <img src={pokemon.sprites.front_default} alt="avatar" />
-                  <div>
+                  <div className='ml-3 pokemon-name'>
                     {pokemon.name.charAt(0).toUpperCase() +
                       pokemon.name.slice(1)}
                   </div>
@@ -37,7 +37,7 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
             );
           })
         ) :
-          <div className='d-flex flex-column align-items-center'>
+          <div className='d-flex flex-column align-items-center no-match-container'>
             <img className='sad-pokemon mb-4' src="/images/sad-pokemon2.png" alt="sad-pokemon"/>
             <h3>No Pokemon found, please try again.</h3>
           </div>

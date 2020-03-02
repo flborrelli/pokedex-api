@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import PokemonList from "./components/PokemonList";
 
 
+
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -103,11 +104,13 @@ function App() {
   } 
 
   return (
-    <div>
+    <div className='home'>
       <NavBar />
       <SearchBar handleInputChange={handleSearchInputChange} />
       <PokemonList getPokemon={pokemonData} getSearchInput={searchValue} showAllPokemons={showAllPokemons} filteredPokemons={filteredPokemons} loader={loader}/>
     </div>
+  
+    
   );
 }
 
