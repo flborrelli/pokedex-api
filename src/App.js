@@ -7,18 +7,18 @@ import PokemonList from "./components/PokemonList";
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [filteredPokemons, setFilteredPokemons] = useState('');
+  const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [showAllPokemons, setShowAllPokemons] = useState(true);
-  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=20";
+  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
 
   useEffect(() => {
     getAPIData();
   }, []);
 
-  // useEffect(() => {
-  //   handleSearchInputChange(e);
-  // }, []);
+  useEffect(() => {
+    filterPokemons();
+  }, [searchValue]);
 
   //Fetch initial API data
   const getAPIData = async () => {
@@ -71,10 +71,6 @@ function App() {
     })
   }
 
-  // //Handle Pokemon Search 
-  // const searchHandler = (value) => {
-  //   setSearchValue(value);
-  // }
 
   //Handle Input Change
   const handleSearchInputChange = (e) => {
@@ -82,18 +78,18 @@ function App() {
     if(e !== ''){
       setShowAllPokemons(false)
       setSearchValue(e.target.value);
-      filterPokemons(searchValue);
+      filterPokemons();
     } else {
       setShowAllPokemons(true)
     }
     console.log(e.target.value);
-    console.log(filteredPokemons)
+    console.log('considered:', searchValue, filteredPokemons)
   }
 
   //Filter Pokemons according to the search input
-  const filterPokemons = (input) => {
+  const filterPokemons = () => {
     const filteredArray = pokemonData.filter(pokemon => {
-      return pokemon.name.includes(input.toLowerCase());
+      return pokemon.name.includes(searchValue.toLowerCase());
     })
     setFilteredPokemons(filteredArray)
   } 

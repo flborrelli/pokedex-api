@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Segment } from 'semantic-ui-react'
 
 function PokemonList( { getPokemon, showAllPokemons, filteredPokemons } ) {
@@ -33,4 +33,4 @@ function PokemonList( { getPokemon, showAllPokemons, filteredPokemons } ) {
   );
 }
 
-export default PokemonList;
+export default React.memo(PokemonList);
