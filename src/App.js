@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
-import SearchBar from './components/SearchBar';
-import PokemonList from "./components/PokemonList";
+import NavBar from "./components/NavBar/NavBar";
+import SearchBar from './components/SearchBar/SearchBar';
+import PokemonList from "./components/PokemonList/PokemonList";
 
 
 

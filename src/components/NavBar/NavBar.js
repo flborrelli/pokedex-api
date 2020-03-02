@@ -3,7 +3,7 @@ import { Navbar } from "react-bootstrap";
 
 function NavBar() {
   return (
-    <Navbar className="mynavbar d-flex justify-content-center">
+    <Navbar data-testid='navbar' className="mynavbar d-flex justify-content-center">
       <Navbar.Brand href="#" className='logo mr-4'>
         <img
           src="/images/pokeapi.png"

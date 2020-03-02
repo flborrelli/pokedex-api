@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "./Loader";
+import Loader from "../Loader/Loader";
 import { Segment } from "semantic-ui-react";
 
 function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) {
