@@ -22,6 +22,16 @@ html {
   width: 10vw;
 }
 
+/* SEARCHBAR */
+
+.search-bar {
+  text-align: center;
+}
+
+.icon {
+  width: 50vw;
+}
+
 /* POKEMONLIST */
 
 .pokelist {
