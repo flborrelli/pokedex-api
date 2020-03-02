@@ -16,6 +16,9 @@ html {
 
 .navbar-title {
   letter-spacing: 0.1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9)
 }
 
 .nav-img {
@@ -34,10 +37,32 @@ html {
 
 /* POKEMONLIST */
 
-.pokelist {
-  /* border: solid; */
-}
 
 .segment {
   width: 50vw;
+}
+
+.sad-pokemon{
+  width: 10vw;
+}
+
+/* LOADER */
+.loader {
+  width: 7vw;
+  animation: frames 2s  linear 0s infinite;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* AnimationFrames */
+@keyframes frames{
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }

@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import SearchBar from './components/SearchBar';
 import PokemonList from "./components/PokemonList";
 
+
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -38,6 +39,7 @@ function App() {
       .then(res => res.json())
       .then(data => {
         resolve(data);
+        setLoader(false);
       })
       .catch(error => {
         console.log('An error ocurred while fetching API:', error)
@@ -104,7 +106,7 @@ function App() {
     <div>
       <NavBar />
       <SearchBar handleInputChange={handleSearchInputChange} />
-      <PokemonList getPokemon={pokemonData} getSearchInput={searchValue} showAllPokemons={showAllPokemons} filteredPokemons={filteredPokemons}/>
+      <PokemonList getPokemon={pokemonData} getSearchInput={searchValue} showAllPokemons={showAllPokemons} filteredPokemons={filteredPokemons} loader={loader}/>
     </div>
   );
 }
