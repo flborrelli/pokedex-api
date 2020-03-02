@@ -45,3 +45,26 @@ exports[`<Navbar /> should match with snapshot 1`] = `
   </h2>
 </nav>
 `;
+
+exports[`should match with navbar snapshot 1`] = `
+<nav
+  className="mynavbar d-flex justify-content-center navbar navbar-expand navbar-light"
+  data-testid="navbar"
+>
+  <a
+    className="logo mr-4 navbar-brand"
+    href="#"
+  >
+    <img
+      alt=""
+      className="nav-img d-inline-block align-top"
+      src="/images/pokeapi.png"
+    />
+  </a>
+  <h2
+    className="navbar-title ml-3"
+  >
+    Find your favourites Pokemons
+  </h2>
+</nav>
+`;

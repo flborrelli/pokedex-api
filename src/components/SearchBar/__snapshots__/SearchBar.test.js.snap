@@ -19,3 +19,23 @@ exports[`<SearchBar /> should match with searchbar snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`should match with searchbar snapshot 1`] = `
+<div
+  className="search-bar mt-5"
+>
+  <div
+    className="ui icon input"
+  >
+    <input
+      onChange={[MockFunction]}
+      placeholder="Search a Pokemon..."
+      type="text"
+    />
+    <i
+      aria-hidden="true"
+      className="search icon"
+    />
+  </div>
+</div>
+`;

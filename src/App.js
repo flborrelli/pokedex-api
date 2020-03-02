@@ -92,9 +92,10 @@ function App() {
 
   //Filter Pokemons according to the search input
   const filterPokemons = () => {
+    const pokemonDataCopy = [...pokemonData];
     const re = new RegExp(searchValue, 'gi');
     const reVowels = new RegExp(/[aeiou]/, 'gi');
-    const filteredArray = pokemonData.filter(pokemon => {
+    const filteredArray = pokemonDataCopy.filter(pokemon => {
       if(pokemon.name.match(re) || pokemon.name.replace(reVowels, '').match(re)){
         return pokemon;
       }
@@ -102,6 +103,8 @@ function App() {
     })
     setFilteredPokemons(filteredArray)
   } 
+
+  console.log(pokemonData)
 
   return (
     <div className='home'>

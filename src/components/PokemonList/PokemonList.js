@@ -22,7 +22,7 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
               </Segment>
             );
           })
-        ) : filteredPokemons.length ? (
+        ) : filteredPokemons.length > 0 ? (
           filteredPokemons.map(pokemon => {
             return (
               <Segment raised className="segment" key={pokemon.id}>

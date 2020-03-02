@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match with snapshot 1`] = `
+<div
+  className="home"
+>
+  <nav
+    className="mynavbar d-flex justify-content-center navbar navbar-expand navbar-light"
+    data-testid="navbar"
+  >
+    <a
+      className="logo mr-4 navbar-brand"
+      href="#"
+    >
+      <img
+        alt=""
+        className="nav-img d-inline-block align-top"
+        src="/images/pokeapi.png"
+      />
+    </a>
+    <h2
+      className="navbar-title ml-3"
+    >
+      Find your favourites Pokemons
+    </h2>
+  </nav>
+  <div
+    className="search-bar mt-5"
+  >
+    <div
+      className="ui icon input"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Search a Pokemon..."
+        type="text"
+      />
+      <i
+        aria-hidden="true"
+        className="search icon"
+      />
+    </div>
+  </div>
+  <div
+    className="d-flex justify-content-center mt-5 mb-4"
+  >
+    <div
+      className="pokelist"
+    >
+      <div>
+        <img
+          alt="loader"
+          className="loader"
+          src="/images/pokeball.png"
+        />
+      </div>
+      <div
+        className="mt-3 loading-text"
+      >
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should match with app snapshot 1`] = `
+<div
+  className="home"
+>
+  <nav
+    className="mynavbar d-flex justify-content-center navbar navbar-expand navbar-light"
+    data-testid="navbar"
+  >
+    <a
+      className="logo mr-4 navbar-brand"
+      href="#"
+    >
+      <img
+        alt=""
+        className="nav-img d-inline-block align-top"
+        src="/images/pokeapi.png"
+      />
+    </a>
+    <h2
+      className="navbar-title ml-3"
+    >
+      Find your favourites Pokemons
+    </h2>
+  </nav>
+  <div
+    className="search-bar mt-5"
+  >
+    <div
+      className="ui icon input"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Search a Pokemon..."
+        type="text"
+      />
+      <i
+        aria-hidden="true"
+        className="search icon"
+      />
+    </div>
+  </div>
+  <div
+    className="d-flex justify-content-center mt-5 mb-4"
+  >
+    <div
+      className="pokelist"
+    >
+      <div>
+        <img
+          alt="loader"
+          className="loader"
+          src="/images/pokeball.png"
+        />
+      </div>
+      <div
+        className="mt-3 loading-text"
+      >
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;
