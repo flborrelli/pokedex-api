@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import SearchBar from './components/SearchBar';
@@ -9,6 +9,7 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [showAllPokemons, setShowAllPokemons] = useState(true);
+  const [loader, setLoader] = useState(true);
   const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
 
@@ -88,8 +89,13 @@ function App() {
 
   //Filter Pokemons according to the search input
   const filterPokemons = () => {
+    const re = new RegExp(searchValue, 'gi');
+    const reVowels = new RegExp(/[aeiou]/, 'gi');
     const filteredArray = pokemonData.filter(pokemon => {
-      return pokemon.name.includes(searchValue.toLowerCase());
+      if(pokemon.name.match(re) || pokemon.name.replace(reVowels, '').match(re)){
+        return pokemon;
+      }
+      return null;
     })
     setFilteredPokemons(filteredArray)
   } 

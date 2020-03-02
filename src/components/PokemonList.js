@@ -1,5 +1,5 @@
-import React, { useMemo } from "react";
-import { Segment } from 'semantic-ui-react'
+import React from "react";
+import { Segment } from 'semantic-ui-react';
 
 function PokemonList( { getPokemon, showAllPokemons, filteredPokemons } ) {
 
