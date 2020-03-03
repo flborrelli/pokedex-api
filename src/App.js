@@ -10,7 +10,7 @@ function App() {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [showAllPokemons, setShowAllPokemons] = useState(true);
   const [loader, setLoader] = useState(true);
-  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=964";
+  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=896";
 
   useEffect(() => {
     getAPIData();
