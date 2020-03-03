@@ -1,7 +1,7 @@
 # Pokedex API
 Pokedex API is a **mobile friendly :iphone: single-page Web application** developed with React :computer:.  
 
-With Pokedex App you can search and filter any pokemon among around 890 species.
+With Pokedex App you can search and filter any pokemon among around 890 species :zap:.
 
 #### API Documentation: https://pokeapi.co/
 
