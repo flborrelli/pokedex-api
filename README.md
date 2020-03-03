@@ -3,6 +3,8 @@ Pokedex API is a **mobile friendly single-page Web application** developed with 
 
 With Pokedex App you can search and filter any pokemon among the existing 964.
 
+#### API Documentation: https://pokeapi.co/
+
 #### App URL: https://master.du2pbm6oxxsio.amplifyapp.com/
 
 ![](/public/images/home.png)
