@@ -42,7 +42,7 @@ html {
 
 .segment {
   width: 50vw;
-  background-color: rgba(243, 234, 234, 0.75) !important;
+  background-color: rgba(255, 246, 246, 0.75) !important;
 }
 
 .sad-pokemon{
@@ -108,7 +108,6 @@ html {
 
 .segment {
   width: 75vw;
-  /* background-color: rgba(252, 200, 200, 0.75) !important; */
 }
 
 .sad-pokemon{

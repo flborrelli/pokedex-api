@@ -10,7 +10,7 @@ function App() {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const [showAllPokemons, setShowAllPokemons] = useState(true);
   const [loader, setLoader] = useState(true);
-  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=150";
+  const apiMainURL = "https://pokeapi.co/api/v2/pokemon?limit=964";
 
   useEffect(() => {
     getAPIData();
@@ -84,8 +84,6 @@ function App() {
     } else {
       setShowAllPokemons(true);
     }
-    console.log(e.target.value);
-    console.log("considered:", searchValue, filteredPokemons);
   };
 
   //Filter Pokemons according to the search input
@@ -104,8 +102,6 @@ function App() {
     });
     setFilteredPokemons(filteredArray);
   };
-
-  console.log(pokemonData);
 
   return (
     <div className="home">
