@@ -16,6 +16,7 @@ html {
 
 .navbar-title {
   letter-spacing: 0.1rem;
+  font-weight: 600;
   text-align: center;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.9)
@@ -33,6 +34,7 @@ html {
 
 .icon {
   width: 50vw;
+  height: 8vh;
 }
 
 /* POKEMONLIST */
@@ -40,7 +42,7 @@ html {
 
 .segment {
   width: 50vw;
-  /* background-color: rgba(252, 200, 200, 0.75) !important; */
+  background-color: rgba(243, 234, 234, 0.75) !important;
 }
 
 .sad-pokemon{
@@ -83,4 +85,63 @@ html {
 
 .footer h4 {
   font-size: 1.2rem;
+}
+
+@media (max-width: 480px) { 
+
+  .loader {
+    width: 15vw;
+  }
+
+.navbar-title {
+  font-size: 1.3rem;
+}
+
+.nav-img {
+  width: 25vw;
+} 
+
+.icon {
+  width: 75vw;
+  height: 5vh;
+}
+
+.segment {
+  width: 75vw;
+  /* background-color: rgba(252, 200, 200, 0.75) !important; */
+}
+
+.sad-pokemon{
+  width: 25vw;
+}
+
+.no-match-container h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.segment img {
+  width: 30vw;
+}
+
+
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+
+.loader {
+    width: 20vw;
+  }
+
+.navbar-title {
+  font-size: 2rem;
+}
+
+.nav-img {
+  width: 30vw;
+} 
+
+.segment {
+  width: 75vw;
+}
 }

@@ -18,11 +18,12 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
                     {pokemon.name.charAt(0).toUpperCase() +
                       pokemon.name.slice(1)}
                   </div>
+              
                 </div>
               </Segment>
             );
           })
-        ) : filteredPokemons.length > 0 ? (
+        ) : filteredPokemons.length ? (
           filteredPokemons.map(pokemon => {
             return (
               <Segment raised className="segment" key={pokemon.id}>
@@ -32,6 +33,7 @@ function PokemonList({ getPokemon, showAllPokemons, filteredPokemons, loader }) 
                     {pokemon.name.charAt(0).toUpperCase() +
                       pokemon.name.slice(1)}
                   </div>
+                
                 </div>
               </Segment>
             );

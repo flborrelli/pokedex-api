@@ -22,3 +22,26 @@ exports[`should match with pokemonlist snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`should match with pokemonlist snapshot 2`] = `
+<div
+  className="d-flex justify-content-center mt-5 mb-4"
+>
+  <div
+    className="pokelist"
+  >
+    <div
+      className="d-flex flex-column align-items-center no-match-container"
+    >
+      <img
+        alt="sad-pokemon"
+        className="sad-pokemon mb-4"
+        src="/images/sad-pokemon2.png"
+      />
+      <h3>
+        No Pokemon found, please try again.
+      </h3>
+    </div>
+  </div>
+</div>
+`;
