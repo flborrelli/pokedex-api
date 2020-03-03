@@ -40,10 +40,10 @@ $ npm start
 
 ## Tests
 
-In order to test this application with jest / enzyme, run the following command in your CLI:
+In order to test this application with react testing library / jest, run the following command in your CLI:
 
 ```
-$ npm run test
+$ npm test
 ```
 
 ## About Me
