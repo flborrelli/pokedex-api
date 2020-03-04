@@ -7,6 +7,10 @@ html {
   font-size: 10px;
 }
 
+img {
+  width: 100%;
+}
+
 /* NAVBAR */
 
 .mynavbar {
@@ -42,11 +46,35 @@ html {
 
 .segment {
   width: 50vw;
-  background-color: rgba(255, 246, 246, 0.75) !important;
+  background-color: rgba(252, 248, 248, 0.75) !important;
 }
 
 .sad-pokemon{
   width: 10vw;
+}
+
+.poke-img {
+  width: 10vw;
+}
+
+.pokemon-name{
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.abilities p{
+  color: rgba(0, 0, 0, 0.75);
+
+}
+
+.abilities h3{
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.75);
+
 }
 
 /* LOADER */
@@ -58,13 +86,6 @@ html {
 .loading-text {
   text-align: center;
   font-size: 1.6rem;
-}
-
-.pokemon-name{
-  font-size: 1.4rem;
-  letter-spacing: 0.05rem;
-  font-weight: 600;
-  color: rgba(0,0,0,0.75);
 }
 
 /* AnimationFrames */
@@ -120,7 +141,12 @@ html {
 }
 
 .segment img {
-  width: 30vw;
+  width: 40vw;
+}
+
+
+.abilities-container{
+  margin-top: 20px;
 }
 
 
@@ -140,7 +166,20 @@ html {
   width: 30vw;
 } 
 
+.icon {
+  width: 75vw;
+  height: 5vh;
+}
+
 .segment {
   width: 75vw;
+}
+
+.poke-img {
+  width: 20vw;
+}
+
+.pokemon-name{
+  font-size: 2rem;
 }
 }
